@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(-5%) }
+    50% { transform: translateY(0) }
+  }
+  
+  @keyframes scan {
+    0% { transform: translateY(-100%) }
+    100% { transform: translateY(100%) }
+  }
+}
+
+@utility animate-bounce-slow {
+  animation: bounce-slow 3s infinite ease-in-out;
+}
+
+@utility scan-line {
+  background: linear-gradient(to bottom, transparent, rgba(16, 185, 129, 0.2), transparent);
+  animation: scan 2s linear infinite;
+}
